@@ -1,32 +1,24 @@
-# Prerequisites
-*.d
-
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
-
-# Precompiled Headers
-*.gch
-*.pch
-
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
-
-# Fortran module files
-*.mod
-*.smod
-
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
-
-# Executables
-*.exe
-*.out
-*.app
+//Описать функцию, которая возвращает точку пересечения двух прямых (уравнение вида y=ax+b). На вход пользователем подаются две пары a и b.
+#include <iostream>
+using namespace std;
+int main() {
+	  setlocale(LC_ALL, "Russian");
+	  int a = 0;
+	  int a1 = 0;
+	  int b = 0;
+	  int b1 = 0;
+	  cout << "Введите ваши значения для a, b: ";
+	  cin >> a >> b;
+	  cout << "Введите ваши значения для a1, b1: ";
+	  cin >> a1 >> b1;
+	  if (a == b) {
+		    cout << "Прямые параллельны";
+	  }
+	  else {
+		    double x = (b - b1) / (a1 - a);
+		    double y = (a1 * a - b1 * b) / (a1 - a);
+		    cout << "Точка пересечения x, y = " << x << y << endl;
+	
+	  }
+	  return 0;
+}
